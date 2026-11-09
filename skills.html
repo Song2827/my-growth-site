@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技能 · 宋伊君</title>
+<meta name="description" content="四项技能：C 语言与调试、文档与演示脚本化、素材核验、技术表达。每项都附证据与边界。">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">宋</span>
+      <span>宋伊君<small>SONG YIJUN</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单">☰</button>
+    <nav class="nav" id="site-nav" aria-label="主导航">
+      <a href="index.html">关于我</a>
+      <a href="projects.html">项目作品</a>
+      <a href="skills.html" aria-current="page">技能</a>
+      <a href="learning.html">学习记录</a>
+      <a href="contact.html">联系方式</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <!-- ============ A 标题 + 规则 ============ -->
+    <section>
+      <h1>技能</h1>
+      <p class="hero-line">
+        这里不写「熟悉 / 了解 / 精通」。每项只写三件事：<b>我用它做了什么</b>、<b>证据在哪</b>、
+        <b>边界在哪（还不会什么）</b>。
+      </p>
+    </section>
+
+    <!-- ============ B 四张技能卡 ============ -->
+    <section class="section">
+      <div class="grid grid-2">
+
+        <article class="card skill-card">
+          <h3>1 · C 语言与调试</h3>
+          <dl class="facts-dl">
+            <div>
+              <dt>做过</dt>
+              <dd>四份课程实验报告，累计定位并修正 20 余处编译与逻辑错误。真正费劲的是那些编译通过、结果却错的。</dd>
+            </div>
+            <div>
+              <dt>证据</dt>
+              <dd>四份实验报告 PDF：每道改错题都写成「错误 → 原因 → 正确写法 → 运行截图」，可直接对照核验。</dd>
+            </div>
+            <div>
+              <dt>边界</dt>
+              <dd>指针、动态内存、文件读写还没系统练过；多文件工程只写过 <code>file1.c</code> / <code>file2.c</code> / <code>file.h</code> 这一种。</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="card skill-card">
+          <h3>2 · 文档与演示脚本化（Python）</h3>
+          <dl class="facts-dl">
+            <div>
+              <dt>做过</dt>
+              <dd>用脚本生成实验报告与演示文稿：目录、页码、图表题注、表格列宽、幻灯片坐标全部由代码控制，改一次全局生效。</dd>
+            </div>
+            <div>
+              <dt>证据</dt>
+              <dd>实验四报告的生成脚本（含目录与页码的自动校对）；两份演示文稿同样由脚本产出。</dd>
+            </div>
+            <div>
+              <dt>边界</dt>
+              <dd>复杂公式还得回 Word 公式编辑器手打；动画和转场做不到。</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="card skill-card">
+          <h3>3 · 素材核验与信息核对</h3>
+          <dl class="facts-dl">
+            <div>
+              <dt>做过</dt>
+              <dd>为课堂展示核验 26 张图片、10 条宣传片、40 余条链接：逐条实测能否打开，按 BV 号对标题 / UP 主 / 时长，标清来源与可用性。</dd>
+            </div>
+            <div>
+              <dt>证据</dt>
+              <dd>素材链接清单（带 ✅ / ⚠️ / ❌ 三级校验结论）；讲稿附录里的数据与引文核对表。</dd>
+            </div>
+            <div>
+              <dt>边界</dt>
+              <dd>查不到官方口径就留白——比如投资额后续追加的部分，宁可不写。</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="card skill-card">
+          <h3>4 · 技术表达（中文汇报 / 英文演讲）</h3>
+          <dl class="facts-dl">
+            <div>
+              <dt>做过</dt>
+              <dd>英文 662 词、控时 4 分 40 秒；中文约 2150 字、控时 8 分半到 9 分半。两份都做了控时排练。</dd>
+            </div>
+            <div>
+              <dt>证据</dt>
+              <dd>英文讲稿全文；两份演示的每页备注都写着提词与停顿提示，上台直接照备注讲。</dd>
+            </div>
+            <div>
+              <dt>边界</dt>
+              <dd>英文口语遇到长句会卡；即兴问答比念稿弱不少。</dd>
+            </div>
+          </dl>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ C 两段代码证据 ============ -->
+    <section class="section">
+      <div class="section-head">
+        <h2>两段代码，两个坑</h2>
+        <p>都从自己的实验报告里摘的，不是示例代码。</p>
+      </div>
+
+      <article class="card" style="margin-bottom:16px">
+        <h3>① <code>!x%i</code> 与 <code>x%i==0</code></h3>
+        <p style="color:var(--ink-2);font-size:.94rem">
+          <code>!</code> 的优先级高于 <code>%</code>，所以 <code>!x%i</code> 实际按 <code>(!x)%i</code> 计算：
+          x 不等于 0 时 <code>!x</code> 是 0，条件永远不成立，一个因子也找不到。
+        </p>
+        <pre class="code"><code><span class="c">/* 实验二 · 合数判断器 */</span>
+<span class="c">/* 错：(!x) % i 恒为 0，循环走完 flag 还是 0，合数全被判成质数 */</span>
+<span class="k">for</span> (i = 2, k = x &gt;&gt; 1; i &lt;= k; i++)
+    <span class="k">if</span> (!x % i) { flag = 1; <span class="k">break</span>; }
+
+<span class="c">/* 对：先取余，再和 0 比较 */</span>
+<span class="k">for</span> (i = 2, k = x &gt;&gt; 1; i &lt;= k; i++)
+    <span class="k">if</span> (x % i == 0) { flag = 1; <span class="k">break</span>; }</code></pre>
+        <p class="note" style="margin-top:14px">代价：编译器不报错，单步时只能看到 flag 一直是 0；改完输入 4 才输出「4 是合数」。</p>
+      </article>
+
+      <article class="card">
+        <h3>② 宏必须整体加括号</h3>
+        <p style="color:var(--ink-2);font-size:.94rem">
+          宏是文本替换，不是函数调用。<code>#define SUM a + b</code> 之后写 <code>SUM * DIF</code>，
+          展开就是 <code>a + b * a - b</code>——乘法先算，平方差直接错。
+        </p>
+        <pre class="code"><code><span class="c">/* 实验四 · 平方差 */</span>
+<span class="c">/* 错：SUM * DIF 展开成 a + b * a - b */</span>
+<span class="k">#define</span> SUM a + b
+<span class="k">#define</span> DIF a - b
+
+<span class="c">/* 对：参数和整体都加括号 */</span>
+<span class="k">#define</span> SUM (a + b)
+<span class="k">#define</span> DIF (a - b)</code></pre>
+        <p class="note" style="margin-top:14px">代价：同样不报错，只是结果偏；换算式也能骗过眼睛，只有把值代进去手算才发现。</p>
+      </article>
+    </section>
+
+    <!-- ============ D 收尾 ============ -->
+    <section class="section">
+      <div class="card">
+        <p class="quote">技能列表会一直变，证据会留下来。</p>
+        <p style="margin-top:16px">下一件想补的事：把「什么时候用宏、什么时候必须写函数」整理成一张判断清单。</p>
+        <div class="btn-row">
+          <a class="btn" href="projects.html">看这些技能用在了哪 →</a>
+          <a class="btn btn--ghost" href="learning.html">看它们是怎么学出来的</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 宋伊君 · 个人成长主页</span>
+    <span>
+      <a href="index.html">关于我</a> ·
+      <a href="projects.html">项目作品</a> ·
+      <a href="skills.html">技能</a> ·
+      <a href="learning.html">学习记录</a> ·
+      <a href="contact.html">联系方式</a>
+    </span>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

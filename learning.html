@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>学习记录 · 宋伊君</title>
+<meta name="description" content="五条学习记录：时间、学了什么、遇到什么问题、怎么解决或还没解决什么。">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">宋</span>
+      <span>宋伊君<small>SONG YIJUN</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单">☰</button>
+    <nav class="nav" id="site-nav" aria-label="主导航">
+      <a href="index.html">关于我</a>
+      <a href="projects.html">项目作品</a>
+      <a href="skills.html">技能</a>
+      <a href="learning.html" aria-current="page">学习记录</a>
+      <a href="contact.html">联系方式</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <!-- ============ A 标题 + 规则 ============ -->
+    <section>
+      <h1>学习记录</h1>
+      <p class="hero-line">
+        按时间倒序，一条一条往上加。每条固定四栏：<b>学了什么 / 卡在哪 / 怎么解决 / 还没解决</b>。
+        没解决的会留在页面上，不删。
+      </p>
+    </section>
+
+    <!-- ============ B 筛选条（交互元素） ============ -->
+    <div class="filters" role="group" aria-label="按标签筛选学习记录">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">全部</button>
+      <button class="chip" type="button" data-filter="c" aria-pressed="false">C 语言</button>
+      <button class="chip" type="button" data-filter="demo" aria-pressed="false">演示</button>
+      <input class="search" id="record-search" type="search" placeholder="搜索关键词，如「宏」「截断」" aria-label="搜索学习记录">
+      <span class="filter-meta" id="filter-meta" aria-live="polite"></span>
+    </div>
+
+    <!-- ============ C 五条记录（时间倒序） ============ -->
+    <div id="record-list">
+
+      <article class="record card" data-tags="c" data-search="宏 括号 悬挂 else 截断 四舍五入 assert 多文件 编译预处理 exp4">
+        <span class="tag">2026-11-06 · C 语言</span>
+        <h2>实验四：编译预处理</h2>
+        <dl class="qa">
+          <div class="qa-row">
+            <dt>学了什么</dt>
+            <dd>宏定义、文件包含、条件编译、<code>assert</code>、多文件编译。</dd>
+          </div>
+          <div class="qa-row">
+            <dt>卡在哪</dt>
+            <dd>宏展开没有括号意识：<code>#define SUM a+b</code> 之后 <code>SUM*DIF</code> 变成 <code>a+b*a-b</code>；
+              <code>SWAP(a,b) a=b,b=a</code> 交换失败；<code>max</code> 里 <code>else</code> 挂在内层 <code>if</code> 上，
+              输入 3、6、5 返回 5；<code>int i=x</code> 是截断不是四舍五入，<code>assert</code> 当场触发。</dd>
+          </div>
+          <div class="qa-row">
+            <dt>怎么解决</dt>
+            <dd>宏的参数和整体都加括号；<code>SWAP</code> 补临时变量 <code>t</code>；给外层 <code>if</code> 加花括号；
+              取整改成 <code>(int)(x + 0.5)</code>。改完输入 5，面积 78.5397、整数部分 79，<code>assert</code> 不再触发。</dd>
+          </div>
+          <div class="qa-row is-open">
+            <dt>还没解决</dt>
+            <dd>什么时候该用宏、什么时候必须写函数，还没有自己的判断标准。</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="record card" data-tags="demo" data-search="课堂展示 讲稿 结构 四层叙事 数据口径 版权 咸宁 小自然 等一个时机">
+        <span class="tag">2026-11-03 · 演示</span>
+        <h2>课堂展示：三版讲稿重写与数据核对</h2>
+        <dl class="qa">
+          <div class="qa-row">
+            <dt>学了什么</dt>
+            <dd>把一个村的变化讲成一条因果链（等一个时机 → 政策引领 → 收获成果 → 我），以及公开数据的口径核对。</dd>
+          </div>
+          <div class="qa-row">
+            <dt>卡在哪</dt>
+            <dd>初稿按「五个问题」平铺，16 页，讲起来散、还超时；投资额、引文、荣誉三处数据在公开报道里口径不一。</dd>
+          </div>
+          <div class="qa-row">
+            <dt>怎么解决</dt>
+            <dd>重排成「四层叙事」，压到封面 + 14 页正文；讲稿改到第三版，约 2150 字、控时 8 分半到 9 分半，
+              15 页备注都写了提词与停顿提示；存疑数据逐条查源，查不到的不写。</dd>
+          </div>
+          <div class="qa-row is-open">
+            <dt>还没解决</dt>
+            <dd>「乡村旅游重点村」的授牌层级始终查不到官方原文，只能按公开报道的措辞写。</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="record card" data-tags="c" data-search="函数 递归 返回类型 long long fac 初始化 大括号 阶乘 求和 跟踪 exp3">
+        <span class="tag">2026-10-23 · C 语言</span>
+        <h2>实验三：函数与程序结构</h2>
+        <dl class="qa">
+          <div class="qa-row">
+            <dt>学了什么</dt>
+            <dd>函数声明与返回类型、参数传递、递归、存储类型，以及用单步跟踪看递归展开。</dd>
+          </div>
+          <div class="qa-row">
+            <dt>卡在哪</dt>
+            <dd><code>for</code> 漏了大括号，<code>s+=fac</code> 在循环外只执行一次，求和退化成 <code>n!</code>；
+              <code>fac</code> 未初始化；返回类型写 <code>long</code>，k=20 就溢出。</dd>
+          </div>
+          <div class="qa-row">
+            <dt>怎么解决</dt>
+            <dd>补大括号、<code>fac=1</code>、返回类型改 <code>long long</code>、格式符改 <code>%lld</code>；
+              递归版按 <code>1!+…+(n-1)! + n!</code> 拆；级数题用 <code>term = term * x / i</code>，
+              把每项从「重算幂和阶乘」降为一次乘除。</dd>
+          </div>
+          <div class="qa-row is-open">
+            <dt>还没解决</dt>
+            <dd>递归层数很深时的栈开销没实测过，不知道到什么规模会出问题。</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="record card" data-tags="c" data-search="流程控制 if switch 循环 单出口 break do-while 优先级 赋值 合数 exp2">
+        <span class="tag">2026-10-16 · C 语言</span>
+        <h2>实验二：流程控制</h2>
+        <dl class="qa">
+          <div class="qa-row">
+            <dt>学了什么</dt>
+            <dd><code>if</code> / <code>switch</code>、<code>for</code> / <code>while</code> / <code>do-while</code>、
+              单出口的结构化改造、转移语句。</dd>
+          </div>
+          <div class="qa-row">
+            <dt>卡在哪</dt>
+            <dd>合数判断器四个错：<code>!x%i</code>（优先级）、<code>if(flag=1)</code>（赋值当判断）、
+              <code>flag</code> 只在定义时清 0（判过一次合数后全错）、<code>printf</code> 少 <code>\n</code>（结果连成一行）。</dd>
+          </div>
+          <div class="qa-row">
+            <dt>怎么解决</dt>
+            <dd>依次改成 <code>x%i==0</code>、<code>flag==1</code>，把 <code>flag=0</code> 移进循环体，补换行；
+              去掉 <code>break</code> 改用 <code>i&lt;=k &amp;&amp; flag==0</code> 做单出口；
+              改 <code>do-while</code> 时前面加 <code>x&gt;3</code>，否则 2、3 会被跳过试除而误判。</dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="record card" data-tags="c" data-search="表达式 运算符 优先级 scanf printf 位运算 右移 符号位 整数除法 中文引号 exp1">
+        <span class="tag">2026-10-09 · C 语言</span>
+        <h2>实验一：表达式与标准 I/O</h2>
+        <dl class="qa">
+          <div class="qa-row">
+            <dt>学了什么</dt>
+            <dd>运算符优先级与类型转换、<code>getchar</code> / <code>putchar</code> / <code>scanf</code> / <code>printf</code>、位运算。</dd>
+          </div>
+          <div class="qa-row">
+            <dt>卡在哪</dt>
+            <dd>一个例程改出 9 处错：宏定义多分号、<code>newint</code> 未定义、中文引号、<code>scanf</code> 漏 <code>&amp;</code>、
+              <code>5/9</code> 得 0 使摄氏温度恒为 0、<code>%f</code> 读 <code>double</code>、<code>printf</code> 输出加 <code>&amp;</code>、
+              <code>0xa1b2</code> 超出 <code>short</code>、<code>k&gt;&gt;8</code> 是算术右移把符号位补进来。</dd>
+          </div>
+          <div class="qa-row">
+            <dt>怎么解决</dt>
+            <dd>先编译清语法错，再单步看变量找逻辑错；<code>k</code> 先转 <code>unsigned short</code> 再右移，
+              得 <code>0x84a1</code> 而不是 <code>0xFFFFFFA1</code>；三题结果与手算一致。</dd>
+          </div>
+          <div class="qa-row is-open">
+            <dt>还没解决</dt>
+            <dd>输入法混进中文符号这类问题，只能靠写完再通读一遍代码，没有更可靠的办法。</dd>
+          </div>
+        </dl>
+      </article>
+
+    </div>
+
+    <p class="no-match" id="no-match">没有匹配的记录，换个关键词或点「全部」试试。</p>
+
+    <!-- ============ D 说明 ============ -->
+    <section class="section">
+      <p class="note">
+        最近一次更新：<time datetime="2026-11-06">2026-11-06</time>。这份记录会一直加，
+        每学完一样东西就补一条，结构不用改。做出来的东西在 <a href="projects.html">项目作品</a>。
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 宋伊君 · 个人成长主页</span>
+    <span>
+      <a href="index.html">关于我</a> ·
+      <a href="projects.html">项目作品</a> ·
+      <a href="skills.html">技能</a> ·
+      <a href="learning.html">学习记录</a> ·
+      <a href="contact.html">联系方式</a>
+    </span>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

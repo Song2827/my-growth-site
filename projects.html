@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>项目作品 · 宋伊君</title>
+<meta name="description" content="三个项目：C 语言实验报告集、英文自我介绍 PPT、课堂展示《等一个时机·小自然》。">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">宋</span>
+      <span>宋伊君<small>SONG YIJUN</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单">☰</button>
+    <nav class="nav" id="site-nav" aria-label="主导航">
+      <a href="index.html">关于我</a>
+      <a href="projects.html" aria-current="page">项目作品</a>
+      <a href="skills.html">技能</a>
+      <a href="learning.html">学习记录</a>
+      <a href="contact.html">联系方式</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <!-- ============ A 页标题 ============ -->
+    <section>
+      <h1>项目作品</h1>
+      <p class="hero-line">
+        三个作品，都按同一套讲清楚：解决什么问题、我负责什么、用了什么技术、最大困难是什么。
+        都是课程作业或自选练习，没有编的。
+      </p>
+    </section>
+
+    <!-- ============ B 项目 1：C 语言实验报告 ============ -->
+    <section class="section">
+      <article class="card project-card">
+        <figure>
+          <img src="assets/report-page.png" alt="实验一改错题内页：9 处错误逐条给出原因与正确写法，下方是 Visual Studio 运行结果" width="636" height="900" loading="lazy">
+          <figcaption>实验一 · 改错题内页（第 3 页）：9 处错误逐条给出「原因 → 正确写法」，末页是运行结果。</figcaption>
+        </figure>
+
+        <div>
+          <span class="tag tag--accent">01 · 课程实验</span>
+          <h2>C 语言程序设计实验报告（4 份）</h2>
+
+          <dl class="facts-dl">
+            <div>
+              <dt>解决什么问题</dt>
+              <dd>按学院模板产出规范的实验报告，同时把课程给出的「错误程序」定位、修正，并验证到与理论结果一致。</dd>
+            </div>
+            <div>
+              <dt>我负责什么</dt>
+              <dd>全部。改错、编程实现、测试用例设计（含越界输入）、运行截图、报告排版（目录 / 页码 / 图表题注）。</dd>
+            </div>
+            <div>
+              <dt>用了什么技术</dt>
+              <dd>C（Visual Studio 编译、断点、单步、观察窗口）；Python 脚本生成 DOCX；测试覆盖正常值与出错分支。</dd>
+            </div>
+            <div>
+              <dt>最大困难</dt>
+              <dd>不报错的错。<code>!x%i</code>、<code>if(flag=1)</code>、悬挂 else、<code>int i=x</code> 截断、<code>k&gt;&gt;8</code> 补符号位——编译器一句警告都不给，只能靠单步盯变量的值。</dd>
+            </div>
+          </dl>
+
+          <h3 style="margin-top:22px">四份实验一览</h3>
+          <ul class="subs subs--grid">
+            <li><time datetime="2026-10-09">10-09</time> · <b>实验一 · 表达式与标准 I/O</b></li>
+            <li><time datetime="2026-10-16">10-16</time> · <b>实验二 · 流程控制</b></li>
+            <li><time datetime="2026-10-23">10-23</time> · <b>实验三 · 函数与程序结构</b></li>
+            <li><time datetime="2026-11-06">11-06</time> · <b>实验四 · 编译预处理</b></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ C 项目 2：英文自我介绍 PPT ============ -->
+    <section class="section">
+      <article class="card project-card">
+        <figure>
+          <img src="assets/intro-cover.png" alt="英文自我介绍 PPT 封面：ENGLISH CLASS PRESENTATION / Song Yijun / 宋伊君 · Freshman" width="1200" height="638" loading="lazy">
+          <figcaption>英文自我介绍 PPT 封面（9 页 / 16:9）。</figcaption>
+        </figure>
+
+        <div>
+          <span class="tag">02 · 自选练习</span>
+          <h2>英文自我介绍 PPT（9 页 / 4 分 40 秒）</h2>
+
+          <dl class="facts-dl">
+            <div>
+              <dt>解决什么问题</dt>
+              <dd>英语课要在 5 分钟内做全英文自我介绍：内容得有记忆点，时间还不能超。</dd>
+            </div>
+            <div>
+              <dt>我负责什么</dt>
+              <dd>全部。四段式结构（才艺 / 家乡 / 高中 / 爱好）、662 词讲稿、PPT 生成、照片版式、控时排练。</dd>
+            </div>
+            <div>
+              <dt>用了什么技术</dt>
+              <dd>Python 生成 PPT（英寸级坐标排版，讲稿写进每页备注）；图像处理（按目标比例裁剪、低分辨率照片放大锐化、矢量插图超采样绘制）；按 140–150 wpm 校时。</dd>
+            </div>
+            <div>
+              <dt>最大困难</dt>
+              <dd>控时。初稿念完 6 分多，超时近 1 分半；只能逐页标时间预算、砍段落，重写到 4 分 40 秒，
+                并在末页留了「超时就删第 7 页最后一段」的预案。第二难是照片：同一张图要进竖版封面和 16:9 内页，
+                直接缩放必变形，最后先按比例裁、再缩放。</dd>
+            </div>
+          </dl>
+
+          <div class="chips">
+            <span class="tag">9 页</span>
+            <span class="tag">662 词</span>
+            <span class="tag">4′40″</span>
+            <span class="tag">140–150 wpm 校时</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ D 项目 3：课堂展示 ============ -->
+    <section class="section">
+      <article class="card project-card">
+        <figure>
+          <img src="assets/xn-cover.jpg" alt="课堂展示《等一个时机》封面：崇阳油市村，小自然的生长和我的一点思考，汇报人宋伊君，软件工程 2603 班" width="1200" height="678" loading="lazy">
+          <figcaption>课堂展示封面：封面 + 14 页正文，10 分钟。</figcaption>
+        </figure>
+
+        <div>
+          <span class="tag">03 · 课堂展示</span>
+          <h2>《等一个时机 · 小自然》（封面 + 14 页正文 / 10 分钟）</h2>
+
+          <dl class="facts-dl">
+            <div>
+              <dt>解决什么问题</dt>
+              <dd>讲清「乡村振兴」在一个村尺度上到底怎么发生的——湖北咸宁崇阳白霓镇油市村「小自然」度假村，
+                从「有风景没产业」到年接待游客超万人次。</dd>
+            </div>
+            <div>
+              <dt>我负责什么</dt>
+              <dd>全部。选题、实地照片、结构设计、14 页正文、约 2150 字讲稿、每页备注（提词 + 停顿提示）、
+                数据核对、素材版权标注。</dd>
+            </div>
+            <div>
+              <dt>用了什么技术</dt>
+              <dd>Python 生成 PPT；素材核验（40 余条链接实测、按 BV 号核对标题 / UP 主 / 时长、逐条标来源与可用性）；
+                讲稿按 wpm 校时。</dd>
+            </div>
+            <div>
+              <dt>最大困难</dt>
+              <dd>结构重写。初稿按「五个问题」平铺，讲出来散；改成四层、每层都落到同一个词「时机」，才立住。
+                另一个难题是数据口径：投资额、引文、荣誉三处公开说法不一，只能一条条查源，查不到的不写。</dd>
+            </div>
+          </dl>
+
+          <h3 style="margin-top:22px">四层结构</h3>
+          <div class="steps">
+            <div class="step"><b>① 等一个时机</b>有风景、没产业；全村都在等。</div>
+            <div class="step"><b>② 政策引领</b>政策铺路、规划先行；能人回乡接上政策链末端。</div>
+            <div class="step"><b>③ 收获成果</b>顺势而建；四两拨千斤。</div>
+            <div class="step"><b>④ 我</b>一个「小自然问答助手」的构想：不困难，但有用。</div>
+          </div>
+
+          <h3 style="margin-top:22px">硬信息</h3>
+          <div class="chips">
+            <span class="tag">森林覆盖率约 80%</span>
+            <span class="tag">流转 800 余亩</span>
+            <span class="tag">24 栋节气木屋</span>
+            <span class="tag">年产有机粮油 10 万斤</span>
+            <span class="tag">年接待游客超万人次</span>
+            <span class="tag">2025 年全国文明村</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ E 正在做 ============ -->
+    <section class="section">
+      <div class="section-head">
+        <h2>正在做</h2>
+        <p>还没交付，所以不算作品。</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>宏与函数的边界</h3>
+          <p>实验四之后一直没想清楚：什么情况该用带参宏、什么情况必须写函数。想把一学期遇到的例子攒成一张判断清单。</p>
+        </div>
+        <div class="card">
+          <h3>递归与栈开销</h3>
+          <p>实验三的递归求和能跑通，但层数很深时会不会爆栈、慢多少，还没实测过。想补一组对比数据。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="btn-row" style="margin-top:0">
+        <a class="btn" href="skills.html">看这些技能的证据 →</a>
+        <a class="btn btn--ghost" href="learning.html">看它们是怎么学出来的</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 宋伊君 · 个人成长主页</span>
+    <span>
+      <a href="index.html">关于我</a> ·
+      <a href="projects.html">项目作品</a> ·
+      <a href="skills.html">技能</a> ·
+      <a href="learning.html">学习记录</a> ·
+      <a href="contact.html">联系方式</a>
+    </span>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

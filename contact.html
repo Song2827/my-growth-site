@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>联系方式 · 宋伊君</title>
+<meta name="description" content="邮箱与 GitHub。含留言表单（纯前端校验，不上传任何内容）。">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">宋</span>
+      <span>宋伊君<small>SONG YIJUN</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单">☰</button>
+    <nav class="nav" id="site-nav" aria-label="主导航">
+      <a href="index.html">关于我</a>
+      <a href="projects.html">项目作品</a>
+      <a href="skills.html">技能</a>
+      <a href="learning.html">学习记录</a>
+      <a href="contact.html" aria-current="page">联系方式</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <!-- ============ A 标题 ============ -->
+    <section>
+      <h1>联系方式</h1>
+      <p class="hero-line">
+        课上交流、项目合作、实习或竞赛找我，用邮箱或 GitHub 都可以。
+        按作业要求，这里<b>不放手机号和家庭住址</b>。
+      </p>
+    </section>
+
+    <!-- ============ B 联系方式三条 ============ -->
+    <section class="section">
+      <div class="grid grid-2" style="align-items:start">
+
+        <div>
+          <ul class="contact-list">
+            <li>
+              <span class="ico" aria-hidden="true">✉</span>
+              <span>
+                <small>邮箱（主要）</small>
+                <a href="mailto:2867148442@qq.com">2867148442@qq.com</a>
+              </span>
+              <button class="copy-btn" type="button" data-copy="2867148442@qq.com">复制</button>
+            </li>
+            <li>
+              <span class="ico" aria-hidden="true">⌥</span>
+              <span>
+                <small>GitHub</small>
+                <a href="https://github.com/Song2827" target="_blank" rel="noopener noreferrer">github.com/Song2827</a>
+              </span>
+            </li>
+            <li>
+              <span class="ico" aria-hidden="true">◎</span>
+              <span>
+                <small>所在地</small>
+                湖北 · 武汉（在校）
+              </span>
+            </li>
+          </ul>
+
+          <div class="card" style="margin-top:16px">
+            <h3>大概能帮上什么</h3>
+            <ul style="color:var(--ink-2);font-size:.92rem;margin:0;padding-left:1.2em">
+              <li>用脚本批量处理文档、图片、演示文稿的重复劳动</li>
+              <li>把作业整理成能直接打开的网页</li>
+              <li>英文稿件的排版与时长校对</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ============ C 留言表单（作业要求的表单/交互元素） ============ -->
+        <div class="card">
+          <h2 style="font-size:1.3rem">留个言</h2>
+          <p style="font-size:.9rem;color:var(--muted)">
+            这是本站的表单元素。纯前端校验，<b>不会真的发送</b>——提交后存在你自己的浏览器里，刷新还在。
+          </p>
+
+          <form id="contact-form" novalidate>
+            <div class="field">
+              <label for="name">你的称呼 <span class="hint">（必填）</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="比如：王老师 / 李同学" aria-describedby="name-error">
+              <span class="error" id="name-error" role="alert"></span>
+            </div>
+
+            <div class="field">
+              <label for="email">邮箱 <span class="hint">（必填，用于回复）</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" aria-describedby="email-error">
+              <span class="error" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="field">
+              <label for="topic">来意</label>
+              <select id="topic" name="topic">
+                <option value="课程作业交流">课程作业交流</option>
+                <option value="项目合作">项目合作</option>
+                <option value="实习 / 竞赛机会">实习 / 竞赛机会</option>
+                <option value="只是想打个招呼">只是想打个招呼</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">留言内容 <span class="hint">（必填，至少 10 字）</span></label>
+              <textarea id="message" name="message" placeholder="说说你想聊什么，或者对这个主页的建议……" aria-describedby="message-error message-count"></textarea>
+              <span class="error" id="message-error" role="alert"></span>
+              <span class="hint" id="message-count">0 字</span>
+            </div>
+
+            <button class="btn" type="submit">提交留言</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="saved" id="saved-note" style="display:none">
+            <b>这台浏览器里已存的留言</b>
+            <ul id="saved-list"></ul>
+            <button class="copy-btn" type="button" id="clear-saved" style="margin-left:0">清空记录</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ D 隐私说明 ============ -->
+    <section class="section">
+      <div class="card">
+        <h2 style="font-size:1.2rem">关于隐私</h2>
+        <p style="margin-bottom:0;color:var(--ink-2)">
+          这个站是公开的，所以只放邮箱和 GitHub。不公开手机号、家庭住址、身份证号、学号等敏感信息；
+          表单内容只保存在访问者自己的浏览器（<code>localStorage</code>），不会上传到任何服务器，我这边也收不到。
+        </p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 宋伊君 · 个人成长主页</span>
+    <span>
+      <a href="index.html">关于我</a> ·
+      <a href="projects.html">项目作品</a> ·
+      <a href="skills.html">技能</a> ·
+      <a href="learning.html">学习记录</a> ·
+      <a href="contact.html">联系方式</a>
+    </span>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
